@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Открытка для Яночки Малышки</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    h1 {
+      color: #ff6b6b;
+    }
+
+    .emoji {
+      display: inline-block;
+      font-size: 60px;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .message {
+      display: none;
+      font-size: 24px;
+      color: #ff6b6b;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Моей Бэсти</h1>
+  <p>Яночка, тапни на эмодзи</p>
+
+  <div class="emoji" onclick="showMessage(0)">🍷</div>
+  <div class="emoji" onclick="showMessage(1)">🎵</div>
+  <div class="emoji" onclick="showMessage(2)">🛌</div>
+
+  <div class="message" id="message0">Давно не выпивали, надо исправить.</div>
+  <div class="message" id="message1">Давай включим музыку и займемся страстным сексом.</div>
+  <div class="message" id="message2">Хочу обнимать тебя всю ночь, моя нежная Яночка!</div>
+
+  <script>
+    function showMessage(index) {
+      const messages = document.getElementsByClassName('message');
+      for (let i = 0; i < messages.length; i++) {
+        messages[i].style.display = 'none';
+      }
+      messages[index].style.display = 'block';
+    }
+  </script>
+</body>
+</html>
